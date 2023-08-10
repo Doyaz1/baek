@@ -36,3 +36,4 @@ int solution(vector<string> order) {
     return answer;
 }
 // 틀린 이유 : ice = 4500, hot = 5000이 아니라 라떼만 5000원인 것을 알면 쉽게 풀 수 있다.
+// 문제 제대로 읽기
