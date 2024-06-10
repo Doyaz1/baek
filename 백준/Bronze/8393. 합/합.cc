@@ -1,18 +1,18 @@
 #include <iostream>
 
+using namespace std;
+
 int main(){
+    int n;
+    int sum = 0;
 
-  int a;
-  int sum = 0;
-  
-  std::cin >> a;
+    cin >> n;
 
-  int counter = 1;
-  while(counter <= a)
-    {
-      sum += counter;
-      counter++;
+    for(int i = 0; i <= n; i++){
+        sum = sum + i;
     }
-  std::cout << sum;
-  return 0;
+
+    cout << sum;
+    
+    return 0;
 }
