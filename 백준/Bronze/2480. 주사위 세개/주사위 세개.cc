@@ -1,40 +1,31 @@
 #include <iostream>
 
-int main(){
+int max(int a, int b, int c) {
+	return a > b ? (a > c) ? a : c : (b > c) ? b : c;
+}
 
-  int dice1, dice2, dice3;
+int main() {
+	int a, b, c;
+	int money = 0;
 
-  std::cin >> dice1;
-  std::cin >> dice2;
-  std::cin >> dice3;
+	std::cin >> a >> b >> c;
 
-  if(dice1 == dice2 && dice2 == dice3)
-    {
-      std::cout << 10000 + (dice1 * 1000);
-    }
-  else if(dice1 == dice2)
-    {
-      std::cout << 1000 + (dice1 * 100);
-    }
-  else if(dice1 == dice3)
-    {
-      std::cout << 1000 + (dice1 * 100);
-    }
-  else if(dice2 == dice3)
-    {
-      std::cout << 1000 + (dice2 * 100);
-    }
-  else if(dice1 > dice2 && dice1 > dice3)
-    {
-      std::cout << dice1 * 100;
-    }
-  else if(dice2 > dice1 && dice2 > dice3)
-    {
-      std::cout << dice2 * 100;
-    }
-  else if(dice3 > dice1 && dice3 > dice2)
-    {
-      std::cout << dice3 * 100;
-    }
-  return 0;
+	if (a == b && b == c) {
+		money = (10000 + (a * 1000));
+	}
+
+	else if (a == b || a == c) {
+		money = 1000 + (a * 100);
+	}
+	else if (b == c) {
+		money = 1000 + (b * 100);
+	}
+
+	else if (a != b && a != c) {
+		money = max(a, b, c) * 100;
+	}
+
+	std::cout << money;
+
+	return 0;
 }
