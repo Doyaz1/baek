@@ -1,21 +1,21 @@
 #include <iostream>
 
-int main(){
+int main() {
+	int array[10] = {0};
+	int a, b, c;
 
-  int count [10] = {};
-  int a, b, c;
+	std::cin >> a >> b >> c;
 
-  std::cin >> a >> b >> c;
+	int mul = a * b * c;
 
-  int d = a * b * c;
+	while(mul > 0){
+		array[mul % 10]++;
+		mul /= 10;
+	}
 
-  while(d != 0){
-    count[d % 10]++;
-    d /= 10;
-  }
-  
-  for(int f : count){
-    std::cout << f << "\n";
-  }
-  return 0;
+	for (int j : array) {
+		std::cout << j << std::endl;
+	}
+
+	return 0;
 }
