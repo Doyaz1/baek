@@ -1,27 +1,21 @@
 #include <iostream>
 
-using namespace std;
-
 int main() {
-    int kg;
-    
-    cin >> kg;
-    
-    int a,b;
-    a = kg/5;
-    
-    while(1){
-        if(a < 0){
-            cout << "-1";
-            return 0;
-        }
-        if((kg-(5*a))%3 == 0){
-            b = (kg-(5*a))/3;
-            break;
-        }
-        a--;
-    }
-    cout << a+b;
-    
-    return 0;
+	int kg;
+	
+	std::cin >> kg;
+
+	for (int i = kg / 5; i >= 0; i--) {
+		int remain = kg - (5 * i);
+
+		if (remain % 3 == 0) {
+			int j = remain / 3;
+			std::cout << i + j << std::endl;
+			return 0;
+		}
+	}
+
+	std::cout << -1 << std::endl;
+
+	return 0;
 }
