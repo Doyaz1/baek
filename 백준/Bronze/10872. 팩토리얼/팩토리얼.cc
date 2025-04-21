@@ -1,18 +1,16 @@
 #include <iostream>
-using namespace std;
- 
-int main(){
-	int N;
-    
-	cin >> N;
- 
-	int f = 1;
- 
-	for (int i = 1; i <= N; i++){
-		f *= i;
+
+int main() {
+	int n;
+	int sum = 1;
+
+	std::cin >> n;
+
+	for (int i = 1; i <= n; i++) {
+		sum *= i;
 	}
- 
-	cout << f << '\n';
-    
+
+	std::cout << sum;
+
 	return 0;
 }
