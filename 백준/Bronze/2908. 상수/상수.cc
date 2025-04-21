@@ -1,28 +1,22 @@
-// 6월 10일 2908번 상수 (C++)
 #include <iostream>
 #include <string>
+#include <algorithm>
 
-int main(){
+int main() {
+	std::string a, b;
 
-    std::string max;
-    std::string a, b;
+	std::cin >> a >> b;
 
-    std::cin >> a >> b;
+	reverse(a.begin(), a.end());
+	reverse(b.begin(), b.end());
 
-    for(int i = 2; i >= 0; i--){
-        if(a[i] > b[i]){
-            max = a;
-            break;
-        }
-        
-        else if(a[i] < b[i]){
-            max = b;
-            break;
-        }
-    }
+	if (a > b) {
+		std::cout << a;
+	}
 
-    for(int i = 2; i >= 0; i--){
-        std::cout << max[i];
-    }
-    return 0;
+	if (a < b) {
+		std::cout << b;
+	}
+	
+	return 0;
 }
