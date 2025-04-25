@@ -1,26 +1,25 @@
 #include <iostream>
 
-using namespace std;
+int gcd(int n, int m) {
+	int c = n % m;
 
-int gcd(int a, int b){
-	int c = a % b;
-    
-	while (c != 0){
-		a = b;
-		b = c;
-		c = a % b;
+	while (c != 0) {
+		n = m;
+		m = c;
+		c = n % m;
 	}
-	return b;
+	return m;
 }
 
-int lcm(int a, int b){
-	return (a * b) / gcd(a, b);
+int lcm(int n, int m) {
+	return (n * m) / gcd(n, m);
 }
 
 int main() {
-	int n1, n2;
-	cin >> n1 >> n2;
-	cout << gcd(n1, n2) << "\n" << lcm(n1, n2);
-    
-    return 0;
+	int n1, m1;
+
+	std::cin >> n1 >> m1;
+
+	std::cout << gcd(n1, m1) << std::endl;
+	std::cout << lcm(n1, m1) << std::endl;
 }
