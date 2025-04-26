@@ -1,25 +1,24 @@
 #include <iostream>
 
-using namespace std;
-
-int fibo(int num){
-    
-    if(num == 0){
-        return 0;
-    }
-    
-    else if(num == 1){
-        return 1;
-    }
-    
-    return fibo(num-2) + fibo(num-1);
-}
 int main() {
-    int num;
-    
-    cin >> num;
-    
-    cout << fibo(num) << "\n";
-    
-    return 0;
+	int n;
+
+	std::cin >> n;
+
+	int a = 0, b = 1, temp;
+
+	if (n == 0) {
+		std::cout << 0 << std::endl;
+	}
+	else {
+		for (int i = 2; i <= n; i++) {
+			temp = a + b;
+			a = b;
+			b = temp;
+		}
+		std::cout << b << std::endl;
+	}
+	return 0;
+
+
 }
