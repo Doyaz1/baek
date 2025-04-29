@@ -1,13 +1,9 @@
 #include <vector>
 
-using namespace std;
- 
-long long sum(vector<int> &a) {
-	long long ans = 0;
-    
+long long sum(std::vector<int>& a) {
+	long long total = 0;
 	for (int i = 0; i < a.size(); i++) {
-		ans += a[i];
+		total += a[i];
 	}
-    
-	return ans;
+	return total;
 }
