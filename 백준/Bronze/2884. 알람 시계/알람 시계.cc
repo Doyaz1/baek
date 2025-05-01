@@ -1,29 +1,25 @@
 #include <iostream>
 
-int main(){
+int main() {
+	int h, m;
 
-int hour, minute;
+	std::cin >> h >> m;
 
-std::cin >> hour >> minute;
+	if (m - 45 < 0) {
+		if (h == 0) {
+			h = 23;
+			m = 60 - (45 - m);
+		}
+		else {
+			h = h - 1;
+			m = 60 - (45 - m);
+		}
+	}
+	else {
+		m = m - 45;
+	}
 
-if (minute - 45 < 0){
+	std::cout << h << " " << m;
 
-  if (hour == 0)
-  {
-    hour = 23;
-    minute = 60 - (45 - minute);
-  }
-
-  else
-  {
-    hour = hour - 1;
-    minute = 60 - (45 - minute);
-  }
-}
-else
-{
-  minute = minute - 45;
-}
-std::cout << hour << " " << minute;
-return 0;
+	return 0;
 }
