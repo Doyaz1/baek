@@ -1,23 +1,23 @@
 #include <iostream>
 
-int main(){
+int main() {
+	int a = 0;
+	int b = 0;
 
-  int x, y;
+	std::cin >> a;
+	std::cin >> b;
 
-  std::cin >> x;
-  std::cin >> y;
-
-  if((x > 0) && (0 < y)){
-    std::cout << 1;
-  }
-  else if((x < 0) && (0 < y)){
-    std::cout << 2;
-  }  
-  else if((x < 0) && ( 0 > y)){
-    std::cout << 3;
-  }
-  else if((x > 0) && (0 > y)){
-    std::cout << 4;
-  }
-  return 0;
+	if (a > 0 && b > 0) {
+		std::cout << 1;
+	}
+	else if (a > 0 && b < 0) {
+		std::cout << 4;
+	}
+	else if (a < 0 && b > 0) {
+		std::cout << 2;
+	}
+	else {
+		std::cout << 3;
+	}
+	return 0;
 }
