@@ -1,25 +1,15 @@
 #include <iostream>
 
-int main() 
-{
-  int year;
-  bool divBy400, divBy4, divBy100;
-  bool leapyear;
+int main() {
+	int y;
 
-  std::cin >> year;
+	std::cin >> y;
 
-  divBy400 = ((year % 400) == 0);
-  divBy4 = ((year % 4) == 0);
-  divBy100 = ((year % 100) == 0);
-  leapyear = (divBy400) || (divBy4 && !(divBy100));
-  
-  if(leapyear)
-  {
-    std::cout << '1';
-  }
-  else
-  {
-    std::cout << '0';
-  }
-  return 0;
-}  
+	if ((y % 4 == 0) && ((y % 100 != 0) || (y % 400 == 0))) {
+		std::cout << "1"; 
+	}
+	else {
+		std::cout << "0";
+	}
+	return 0;
+}
