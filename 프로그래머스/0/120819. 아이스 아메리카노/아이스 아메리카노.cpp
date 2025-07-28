@@ -17,7 +17,7 @@ vector<int> solution(int money) {
         answer.push_back(money - (americano * (money / americano)));
     }
     
-    
-    
     return answer;
 }
+
+// return vector <int> {money / 5500, money % 5500;}
