@@ -9,7 +9,7 @@ string solution(int age) {
     string str = to_string(age);
     
     for(int i = 0; i < str.size(); i++){
-        answer += str[i] + 49;
+        answer += 'a' + (str[i] - '0');
     }
     
     return answer;
