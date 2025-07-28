@@ -8,14 +8,8 @@ using namespace std;
 string solution(string my_string) {
     string answer = "";
     
-    for(int i = 0; i < my_string.size(); i++){
-        if(my_string[i] >= 'a' && my_string[i] <= 'z'){
-            answer += my_string[i];
-        }
-        
-        else if(my_string[i] >= 'A' && my_string[i] <= 'Z'){
-            answer += tolower(my_string[i]);
-        }
+    for(const char& ch : my_string){
+        answer += tolower(ch);
     }
     
     sort(answer.begin(), answer.end());
