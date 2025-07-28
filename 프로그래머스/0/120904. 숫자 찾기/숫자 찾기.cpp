@@ -1,0 +1,18 @@
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int solution(int num, int k) {
+    int answer = 0;
+    
+    string s = to_string(num);
+    char ch = k + '0';
+    
+    for(int i = 0; i < s.size(); i++){
+        if(s[i] == ch){
+            return i + 1;
+        }
+    }
+    return -1;
+}
