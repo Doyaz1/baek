@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -16,9 +17,7 @@ int main() {
         sum += q * y;
 
     }
-    cout.precision(3);
-    cout << fixed;
-    cout << sum << endl;
+    cout << fixed << setprecision(3) << sum;
 
     return 0;
 }
