@@ -1,27 +1,32 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
+
 using namespace std;
 
 int main() {
     
     int n;
+
     cin >> n;
 
-    int num = 0;
-    int max1 = 0;
+    vector<int> v;
 
     for (int i = 0; i < n; i++) {
         int a, b;
-
         cin >> a >> b;
-
-        num -= a;
-        num += b;
-
-        max1 = max(max1, num);
+        v.push_back(b - a);
     }
 
-    cout << max1 << endl; 
+    int cur = 0;
+    int ans = 0;
+
+    for (int x : v) {
+        cur += x;
+        ans = max(ans, cur);
+    }
+
+    cout << ans << endl;
 
     return 0;
 }
