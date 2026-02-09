@@ -4,37 +4,32 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(0);
-    cin.tie(0);
+	int n;
 
-    int n;
+	cin >> n;
 
-    cin >> n;
+	int score = 0;
 
-    long long score = 0;
+	for (int i = 0; i < n; i++) {
+		string s;
 
-    for (int i = 0; i < n; i++) {
-        string s;
-        cin >> s;  
+		cin >> s;
 
-        for (char c : s) {
-            switch (c) {
-            case 'A': 
-                score += 4; 
-                break;
-            case 'K': 
-                score += 3; 
-                break;
-            case 'Q': 
-                score += 2; 
-                break;
-            case 'J': 
-                score += 1; 
-                break;
-            }
-        }
-    }
-
-    cout << score << '\n';
-    return 0;
+		for (char c : s) {
+			if (c == 'A') {
+				score += 4;
+			}
+			else if (c == 'K') {
+				score += 3;
+			}
+			else if (c == 'Q') {
+				score += 2;
+			}
+			else if (c == 'J') {
+				score += 1;
+			}
+		}
+	}
+	cout << score;
+	return 0;
 }
