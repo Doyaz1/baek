@@ -1,20 +1,22 @@
-#define _CRT_SECURE_NO_WARNINGS
-#include <stdio.h>
+#include <iostream>
+
+using namespace std;
 
 int main() {
-
+	
 	int Div;
 
-	scanf("%d", &Div);
-	
+	cin >> Div;
+
 	int sum = 0;
+
 	for (int i = 1; i <= Div; i++) {
 		if ((Div % i) == 0) {
 			sum += i;
 		}
 	}
 
-	printf("%d", sum);
+	cout << sum << endl;
 
 	return 0;
-}	
+}
