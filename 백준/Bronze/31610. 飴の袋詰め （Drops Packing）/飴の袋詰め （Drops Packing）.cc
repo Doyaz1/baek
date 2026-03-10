@@ -1,17 +1,16 @@
-#include <iostream>
-
-using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
 int main() {
-	
+
 	int x, y, z;
 
-	cin >> x >> y >> z;
+	scanf("%d %d %d", &x, &y, &z);
 
 	int mul = x * y;
 	int sum = mul + z;
 
-	cout << sum << endl;
+	printf("%d", sum);
 
 	return 0;
-}
+}	
