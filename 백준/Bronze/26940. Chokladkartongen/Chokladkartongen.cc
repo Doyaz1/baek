@@ -1,31 +1,30 @@
-#include <iostream>
-
-using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
 int main() {
-	
+
 	int t;
 	int iPrev;
 
-	cin >> t;
-	cin >> iPrev;
+	scanf("%d", &t);
+	scanf("%d", &iPrev);
 
-	int count = 0;
+	int count;
+	count = 0;
 
 	for (int i = 1; i < t; i++) {
 		int iCurr;
 
-		cin >> iCurr;
+		scanf("%d", &iCurr);
 
 		if (iPrev < iCurr) {
 			count++;
 		}
 
 		iPrev = iCurr;
-
 	}
 
-	cout << count << endl;
+	printf("%d", count);
 
 	return 0;
-}
+}	
