@@ -1,30 +1,32 @@
-#include <iostream>
-
-using namespace std;
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 
 int main() {
-	
-	int iAb; // 입력된 타수	
 
-	cin >> iAb;
+	int iAb; // 입력된 타수
 
-	int iTb = 0; // 토탈 베이스
-	int count = 0;	// 실제 타수
-	double dSlg = 0; // 장타율
+	scanf("%d", &iAb);
+
+	int iTb;	// 토탈 베이스
+	int iCount;	// 실제 타수
+	double dSlg;	// 장타율
+	iTb = 0;
+	iCount = 0;
+	dSlg = 0;
 
 	for (int i = 0; i < iAb; i++) {
-		int iBa; // 진루(베이스)
-		cin >> iBa;
-		
+		int iBa;
+		scanf("%d", &iBa);
+
 		if (iBa != -1) {
 			iTb += iBa;
-			count++;
+			iCount++;
 		}
 	}
 
-	dSlg = (double)iTb / count;
+	dSlg = (double)iTb / iCount;
 
-	cout << dSlg << endl;
+	printf("%lf \n", dSlg);
 
 	return 0;
-}
+}	
